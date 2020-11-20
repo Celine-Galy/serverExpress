@@ -4,7 +4,8 @@ const express = require('express'); // Appel de la dépendance
 const app = express();               // Initialisation de l'application
 const port = 1234;              // Choix du port
 const mysql = require('mysql');
-
+const DBManager = require('./db-manager');
+const dbManager = new DBManager();
 
 //Loads the handlebars module
 const handlebars = require('express-handlebars');//Sets our app to use the handlebars engine
