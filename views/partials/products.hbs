@@ -1,7 +1,7 @@
-<form>
-    <input type="text" name="search" />
-    <button type="submit">Rechercher</button>
-</form>
+
+    <input id="input-search"type="text" name="search" value="{{search}}"/>
+    <button id="btn-search" type="submit">Rechercher</button>
+
 
 <table>
     <thead>
@@ -11,7 +11,7 @@
             <td>Prix</td>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="table-body">
         {{#each products}}
         <tr>
             <td>{{this.productCode}}</td>
@@ -21,3 +21,12 @@
         {{/each}}
     </tbody>
 </table>
+<script id="template-rows" type="text/x-handlebars-template">
+    \{{#each products}}
+    <tr>
+        <td>\{{this.productCode}}</td>
+        <td>\{{this.productName}}</td>
+        <td>\{{this.buyPrice}}</td>
+    </tr>
+    \{{/each}}
+</script>
